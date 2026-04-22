@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🇧🇩 Bangla Voice AI Customer Support Agent
 
-## Getting Started
+A lightweight demo of a **multilingual voice AI customer support agent** powered by ElevenLabs and OpenAI, targeting the Bangla-speaking market.
 
-First, run the development server:
+## 🎯 Value Proposition
+
+**Problem:** Many businesses in South Asia (Bangladesh, West Bengal, etc.) lack high-quality voice AI solutions in local languages, limiting their ability to provide automated customer support.
+
+**Solution:** This demo showcases how ElevenLabs' multilingual capabilities can power real-time customer support agents in Bangla, a language spoken by 230+ million people.
+
+## ✨ Features
+
+- ✅ **Bangla language support** via GPT-4 and ElevenLabs Multilingual v2
+- ✅ **Real-time voice synthesis** for customer support responses
+- ✅ **Clean, responsive UI** built with Next.js and Tailwind CSS
+- ✅ **Easy deployment** to Vercel (1-click)
+- ✅ **Use case:** Telecom customer support (account reset, billing, network issues)
+
+## 🚀 Quick Start (2 minutes)
+
+### 1. Clone and Install
+
+```bash
+cd bangla-voice-support
+npm install
+```
+
+### 2. Set Up API Keys
+
+Create a `.env.local` file:
+
+```bash
+cp .env.example .env.local
+```
+
+Then add your keys:
+
+- **OpenAI API Key:** Get from https://platform.openai.com/api-keys
+- **ElevenLabs API Key:** Get from https://elevenlabs.io/app/settings/api-keys
+
+```env
+OPENAI_API_KEY=sk-...
+ELEVENLABS_API_KEY=...
+ELEVENLABS_VOICE_ID=pNInz6obpgDQGcFmaJgB  # Optional: choose a voice
+```
+
+### 3. Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Try It Out
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ask questions like:
+- **Bangla:** "আমার অ্যাকাউন্ট কীভাবে রিসেট করব?" (How do I reset my account?)
+- **English:** "How do I check my balance?"
 
-## Learn More
+The agent will respond in Bangla with both text and voice.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push code to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new)
+3. Import your repository
+4. Add environment variables:
+   - `OPENAI_API_KEY`
+   - `ELEVENLABS_API_KEY`
+   - `ELEVENLABS_VOICE_ID` (optional)
+5. Deploy!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Your live demo will be ready in ~60 seconds.
 
-## Deploy on Vercel
+## 🎙️ Customizing the Voice
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ElevenLabs offers 70+ languages and hundreds of voices. To change the voice:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Browse voices at https://elevenlabs.io/app/voice-library
+2. Copy the Voice ID
+3. Update `ELEVENLABS_VOICE_ID` in `.env.local`
+
+## 💡 Use Cases
+
+This demo can be adapted for:
+
+- **Telecom:** Customer support, plan inquiries
+- **Fintech:** Account management, transaction queries
+- **Healthcare:** Appointment booking, medication reminders
+- **E-commerce:** Order tracking, returns/refunds
+- **Government services:** Public information, form assistance
+
+## 🔧 Tech Stack
+
+- **Frontend:** Next.js 16, React, Tailwind CSS
+- **AI:** OpenAI GPT-4 (conversation logic)
+- **Voice:** ElevenLabs Multilingual v2 (text-to-speech)
+- **Deployment:** Vercel (serverless)
+
+## 📊 Why This Matters for ElevenLabs
+
+1. **Underserved market:** Bangla is the 7th most spoken language globally, but has limited voice AI support
+2. **Real business need:** Companies in Bangladesh struggle with automated multilingual support
+3. **Expansion opportunity:** Demonstrates ElevenLabs' strength in non-English markets
+4. **Integration example:** Shows how easily ElevenLabs integrates with conversational AI
+
+## 🛠️ Next Steps (Beyond Demo)
+
+To make this production-ready:
+
+- [ ] Add speech-to-text (Whisper API) for voice input
+- [ ] Implement conversation memory/context management
+- [ ] Add authentication and user sessions
+- [ ] Integrate with CRM/ticketing systems (Zendesk, Freshdesk)
+- [ ] Add analytics and monitoring
+- [ ] Support multiple languages (Hindi, Tamil, etc.)
+
+## 📝 License
+
+MIT
+
+---
+
+**Built for the ElevenLabs team to showcase multilingual voice AI deployment** 🎯
